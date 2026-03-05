@@ -54,16 +54,27 @@ Hand Gesture Detection
 2048-using-Hand-Gestures
 │
 ├── index.html        # Main game interface
+
 ├── style.css         # Game styling
+
 ├── game.js           # Core game logic
+
 ├── gesture.js        # Hand gesture detection
+
 ├── ui.js             # UI rendering and updates
+
 └── README.md         # Project documentation
+
 ▶️ How to Run the Project
+
 1️⃣ Clone the Repository
+
 git clone https://github.com/Mohan-Sala/2048-using-Hand-Gestures.git
+
 2️⃣ Navigate to the Project Folder
+
 cd 2048-using-Hand-Gestures
+
 3️⃣ Run the Game
 
 Open index.html in your browser.
