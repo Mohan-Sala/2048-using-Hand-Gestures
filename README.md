@@ -1,42 +1,38 @@
 🎮 2048 Game Using Hand Gestures
 
-An interactive implementation of the classic 2048 puzzle game where the player controls the game using hand gestures instead of a keyboard. The system detects real-time hand movements using computer vision and maps them to game controls, creating a touch-free gaming experience.
+An interactive implementation of the classic 2048 puzzle game where the player controls the game using hand gestures instead of keyboard inputs. This project demonstrates how computer vision and web technologies can be combined to create a touch-free gaming experience using a webcam.
 
-This project demonstrates the integration of computer vision and interactive web applications, allowing users to control the game using simple gestures such as left, right, up, and down hand movements captured through a webcam.
+The system detects hand movements in real time and maps them to game controls such as left, right, up, and down, allowing players to play the game using natural gestures.
 
 🚀 Features
 
-🖐 Hand Gesture Control – Play the 2048 game using hand movements.
+🖐 Gesture-Based Controls – Play the game using hand movements.
 
 🎮 Classic 2048 Gameplay – Merge tiles to reach the 2048 tile.
 
-📷 Real-time Webcam Detection – Uses camera input for gesture recognition.
+📷 Webcam Integration – Detects hand gestures through camera input.
 
-⚡ Fast and Interactive UI – Smooth game interactions with real-time updates.
+⚡ Real-Time Interaction – Instant response to gesture movements.
 
-🌐 Browser Based – Runs directly in the browser.
+🌐 Browser-Based Application – Runs directly in a web browser.
 
 🧠 How It Works
 
 The webcam captures live video input.
 
-The system detects the user's hand using computer vision.
+The system detects the user's hand in the frame.
 
-Hand gestures are recognized based on finger positions and movement.
+Hand movements are analyzed to determine gesture direction.
 
-Recognized gestures are mapped to game actions:
+Each gesture is mapped to a game action:
 
-👆 Up → Move tiles up
+Gesture	Game Action
+👆 Up	Move tiles up
+👇 Down	Move tiles down
+👉 Right	Move tiles right
+👈 Left	Move tiles left
 
-👇 Down → Move tiles down
-
-👉 Right → Move tiles right
-
-👈 Left → Move tiles left
-
-The game board updates accordingly.
-
-Hand gesture systems commonly use frameworks like MediaPipe or computer vision models to track hand landmarks and recognize gestures in real time.
+The game board updates dynamically based on the detected gesture.
 
 🛠 Tech Stack
 
@@ -48,70 +44,65 @@ CSS3
 
 JavaScript
 
-Computer Vision
+Computer Vision Concepts
 
 Webcam API
 
-Hand Gesture Detection (MediaPipe / OpenCV based concepts)
+Hand Gesture Detection
 
-Game Logic
-
-JavaScript game engine implementation
-
-
+📂 Project Structure
+2048-using-Hand-Gestures
+│
+├── index.html        # Main game interface
+├── style.css         # Game styling
+├── game.js           # Core game logic
+├── gesture.js        # Hand gesture detection
+├── ui.js             # UI rendering and updates
+└── README.md         # Project documentation
 ▶️ How to Run the Project
-
 1️⃣ Clone the Repository
 git clone https://github.com/Mohan-Sala/2048-using-Hand-Gestures.git
-
 2️⃣ Navigate to the Project Folder
 cd 2048-using-Hand-Gestures
+3️⃣ Run the Game
 
-3️⃣ Open the Game
+Open index.html in your browser.
 
-Simply open:
+Allow camera access when prompted so the system can detect your hand gestures.
 
-index.html
+🎯 Game Objective
 
-in your browser.
+Combine tiles with the same numbers to create the 2048 tile while achieving the highest possible score.
 
-Allow camera permission when prompted.
-
-🎯 Controls
-Gesture	Action
-✋ Swipe Up	Move tiles up
-✋ Swipe Down	Move tiles down
-✋ Swipe Left	Move tiles left
-✋ Swipe Right	Move tiles right
 💡 Future Improvements
 
-Add gesture training for better accuracy
+Improve gesture recognition accuracy
+
+Add mobile gesture support
+
+Add leaderboard and score tracking
 
 Implement AI-based gesture classification
 
-Add mobile camera support
-
-Add score leaderboard
-
-Improve gesture detection latency
+Deploy a live playable demo
 
 📚 Learning Outcomes
 
-Through this project, the following concepts were explored:
+This project helped in understanding:
 
 Computer Vision fundamentals
 
 Hand Gesture Recognition
 
-Real-time interaction using webcam input
+Real-time human–computer interaction
 
-Event-driven game development
+JavaScript game development
 
-Frontend UI design
+Frontend UI design and event handling
 
 🤝 Contributing
 
-Contributions are welcome!
+Contributions are welcome.
 
 Fork the repository
 
@@ -119,10 +110,8 @@ Create a new branch
 
 Commit your changes
 
-Open a Pull Request
+Submit a Pull Request
 
-📄 License
+⭐ Support
 
-This project is open source and available under the MIT License.
-
-⭐ If you like this project, please consider starring the repository!
+If you like this project, consider starring the repository to support the work
