@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gesture Controlled 2048</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    
+    <!-- MediaPipe Libraries -->
+    <script src="https://cdn.jsdelivr.net/npm/@mediapipe/camera_utils/camera_utils.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@mediapipe/control_utils/control_utils.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@mediapipe/drawing_utils/drawing_utils.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@mediapipe/hands/hands.js" crossorigin="anonymous"></script>
+</head>
+<body class="dark-mode">
+    <div class="particles" id="particles"></div>
+    
+    <div class="container">
+        <header>
+            <div class="header-left">
+                <h1>2048</h1>
+                <p class="subtitle">Gesture Edition</p>
+            </div>
+            
+            <div class="scores">
+                <div class="score-box">
+                    <div class="score-label">SCORE</div>
+                    <div class="score-value" id="current-score">0</div>
+                    <div class="score-addition" id="score-addition"></div>
+                </div>
+                <div class="score-box">
+                    <div class="score-label">BEST</div>
+                    <div class="score-value" id="best-score">0</div>
+                </div>
+            </div>
+        </header>
+
+        <div class="controls">
+            <button class="btn" id="restart-btn">New Game</button>
+            <div class="toggles">
+                <button class="icon-btn" id="theme-btn" title="Toggle Theme">☀️</button>
+                <button class="icon-btn" id="sound-btn" title="Toggle Sound">🔊</button>
+                <button class="icon-btn" id="controls-btn" title="Toggle Controls">⌨️</button>
+            </div>
+        </div>
+
+        <div class="game-area">
+            <div class="board-container">
+                <div class="game-board" id="game-board">
+                    <!-- Grid cells and tiles will be generated here -->
+                </div>
+                
+                <div class="game-message" id="game-message">
+                    <p id="message-text">Game Over!</p>
+                    <div class="lower">
+                        <button class="btn retry-btn" id="retry-btn">Try again</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="sidebar">
+                <div class="webcam-panel glass-panel">
+                    <h3>Webcam Setup</h3>
+                    <div class="video-container" id="video-container">
+                        <video class="input_video" autoplay playsinline></video>
+                        <canvas class="output_canvas" width="250" height="180"></canvas>
+                        <div class="loading-overlay" id="camera-loading">
+                            Loading Camera...
+                        </div>
+                    </div>
+                    <div class="gesture-indicator" id="gesture-indicator">
+                        Waiting for hand...
+                    </div>
+                    <div class="slider-container">
+                        <label for="sensitivity">Sensitivity:</label>
+                        <input type="range" id="sensitivity" min="1" max="10" value="5">
+                    </div>
+                </div>
+
+                <div class="instructions glass-panel">
+                    <h3>How to Play</h3>
+                    <p>Move your <strong>Index Finger</strong> to slide the tiles.</p>
+                    <ul class="direction-list">
+                        <li>⬅️ Swipe Left</li>
+                        <li>➡️ Swipe Right</li>
+                        <li>⬆️ Swipe Up</li>
+                        <li>⬇️ Swipe Down</li>
+                    </ul>
+                    <p>Tiles with the same number merge into one when they touch. Add them up to reach <strong>2048</strong>!</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Audio Elements (placeholders - using Web Audio API or base64 data URIs would be better, but we'll wire these up in JS) -->
+    
+    <script src="game.js"></script>
+    <script src="gesture.js"></script>
+    <script src="ui.js"></script>
+</body>
+</html>
